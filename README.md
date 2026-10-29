@@ -121,45 +121,92 @@ Operating system/
 
 ---
 
-## Getting Started
+---
 
-### Prerequisites
-- **Node.js**: v18.0.0 or later (v25+ recommended)
-- **npm**: v9.0.0 or later
+## How to Run the Project
 
-### Installation
+Follow these step-by-step instructions to run the project locally on your machine.
+
+### 1. Prerequisites
+Ensure you have the following installed on your system:
+- **Node.js**: `v18.0.0` or higher ([Download Node.js](https://nodejs.org/))
+- **npm**: `v9.0.0` or higher (comes bundled with Node.js)
+- **Git**: ([Download Git](https://git-scm.com/))
+
+Check your installed versions by running in your terminal:
+```bash
+node -v
+npm -v
+```
+
+---
+
+### 2. Clone the Repository
+Open your terminal or command prompt and clone the repository:
+```bash
+git clone https://github.com/RajKale07/Operating_System_stimulation-and-visualizer.git
+```
+
+Navigate into the project directory:
+```bash
+cd Operating_System_stimulation-and-visualizer
+```
+
+---
+
+### 3. Install Dependencies
+Install all required Node.js packages:
 ```bash
 npm install
 ```
 
-### Running Locally
-Start the Vite development server:
+---
+
+### 4. Start the Development Server
+Launch the interactive visualizer in development mode:
 ```bash
 npm run dev
 ```
-Open `http://localhost:5173/` (or the port shown in your terminal) in your browser.
 
-### Running Automated Tests
-Run unit tests across CPU scheduling, memory algorithms, and simulation snapshots:
+Once the terminal displays `VITE ready`, open your web browser and navigate to:
+```
+http://localhost:5173/
+```
+*(If port `5173` is already occupied, Vite will automatically select the next available port, e.g., `http://localhost:5174/`).*
+
+---
+
+### 5. Run Automated Unit Tests
+To run the automated test suite verifying CPU scheduling algorithms (FCFS, SRTF, RR), memory paging (FIFO, LRU), and deterministic time travel:
 ```bash
 npm test
 ```
 
-### Linting
-Verify code style and TypeScript/JSX correctness:
-```bash
-npm run lint
-```
+---
 
-### Production Build
-Build the minified production bundle into `dist/`:
+### 6. Build for Production
+To create an optimized, minified production build:
 ```bash
 npm run build
 ```
-Preview the production build:
+The compiled files will be output to the `dist/` directory.
+
+To test and preview the production build locally:
 ```bash
 npm run preview
 ```
+
+---
+
+### Available Scripts Reference
+
+| Command | Purpose |
+| :--- | :--- |
+| `npm run dev` | Starts the local development server with Hot Module Replacement (HMR). |
+| `npm test` | Runs all unit tests using Node.js native test runner (`node --test`). |
+| `npm run build` | Compiles and bundles the application for production deployment into `dist/`. |
+| `npm run preview` | Locally serves the production `dist/` bundle for verification. |
+| `npm run lint` | Runs ESLint to check for code quality and syntax issues. |
 
 ---
 
